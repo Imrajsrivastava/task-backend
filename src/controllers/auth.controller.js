@@ -6,9 +6,9 @@ dotenv.config();
 const setTokenCookie = (res, token) => {
   res.cookie("token", token, {
     httpOnly: true,
-    secure: true, // must be true for HTTPS (Render is HTTPS)
-    sameSite: "none", // important for cross-origin cookies
-    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+    secure: true, 
+    sameSite: "none", 
+    maxAge: 7 * 24 * 60 * 60 * 1000,
   });
 };
 
