@@ -1,5 +1,7 @@
 import { registerUser, loginUser } from "../services/auth.service.js";
+import dotenv from "dotenv";
 
+dotenv.config();
 const setTokenCookie = (res, token) => {
   res.cookie("token", token, {
     httpOnly: true,
